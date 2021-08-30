@@ -1,0 +1,37 @@
+
+package uçakbileti;
+import java.util.Scanner;
+public class UçakBileti {
+
+    public static void main(String[] args) {
+        double mesafe,yaş,tutar,ücret = 1,yİndirim=0 ;
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("yaşınız giriniz :");
+        yaş = input.nextInt();
+        
+        System.out.print("mesafenizi km olarak giriniz : ");
+        mesafe = input.nextInt();
+        
+        tutar=mesafe*ücret;
+        
+        System.out.print("yolculuk tipini giriniz ? (1=>GİDİŞ / 2=>GİDİŞ-DÖNÜŞ) : ");
+        int yolculuk = input.nextInt();
+        if(yolculuk == 2){
+            tutar = tutar*1.8;
+        }else if(yolculuk == 1){
+            tutar = tutar;
+        }else{
+            System.out.print("1 VEYA 2 Yİ TUŞLAYINIZ...");
+        }
+        if(yaş<12){
+            tutar=tutar*0.5;
+        }else if(yaş>=12 && yaş<24){
+            tutar=tutar*0.1;
+        }else if(yaş>=65){
+            tutar=tutar*0.30;
+        }
+        System.out.println("TOPLAM : " + tutar);
+    }
+    
+}
