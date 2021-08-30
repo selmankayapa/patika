@@ -1,0 +1,54 @@
+
+package kullanıcı.adı;
+import java.util.Scanner;
+public class KullanıcıAdı {
+
+
+    public static void main(String[] args) {
+        String userName,password;
+        Scanner input = new Scanner(System.in);
+        
+        //username
+        System.out.print("kullanıcı adınızı giriniz : ");
+        userName = input.nextLine();
+        //password
+        System.out.print("şifrenizi giriniz.");
+        password = input.nextLine();
+        
+        if(userName.equals("Selman") && password.equals("kayapa")){
+            System.out.println("bilgileriniz doğru");           
+        }else if(!userName.equals("Selman") && password.equals("kayapa")){
+            System.out.println("kullanıcı adı yanlış.");
+        }else if(!userName.equals("Selman") && !password.equals("kayapa")){            
+            System.out.println("kullanıcı adı ve şifre yanlış.");
+        }else{
+            System.out.println("şifreniz yanlış.");
+            System.out.print("şifrenizi yenilemek istermisiniz ? E/H : ");
+            char sifreCevap = input.next().charAt(0);
+            
+            if(sifreCevap == 'E'){
+                System.out.print("lütfen yeni şifre giriniz.");
+                String newPassword =input.next();
+                if(newPassword.equals("kayapa")){
+                    System.out.println("şifreniz eski şifreyle aynı olamaz.");                    
+                }else{
+                    System.out.println("şifreniz başarıyla oluşturuldu.");
+                }
+           }else if(sifreCevap == 'H'){
+            System.out.println("şifre oluşturma işlemi iptal edildi..");
+        }else{
+                System.out.println("Lütfen doğru parametre giriniz.E(EVET),H(HAYIR)");
+           }
+           
+               
+            }
+        
+        
+            
+           
+        
+               
+      
+    }
+    
+}
