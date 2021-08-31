@@ -1,0 +1,29 @@
+
+package javaapplication59;
+import java.util.Scanner;
+
+public class JavaApplication59 {
+
+    public static void main(String[] args) {
+         int A,i,bolen=0,toplam=0,ortalama;
+   Scanner input = new Scanner(System.in);
+   
+        System.out.print("sayı giriniz..");
+        A = input.nextInt(); 
+        
+        for(i=1;i <= A ; i++){
+            if(i%3==0 && i%4==0){
+                System.out.println(i);
+                bolen++;
+                toplam += i;
+            }   
+            
+        }
+        ortalama=toplam/bolen;
+        System.out.println(ortalama);
+    }
+    
+}
+    
+    
+
