@@ -1,23 +1,24 @@
-package üssü.sayı;
+
+package üssüsayı;
 import java.util.Scanner;
 public class ÜssüSayı {
 
     public static void main(String[] args) {
-        int sayı;
-        Scanner input = new Scanner(System.in);
-        
+     int sayi,kuvvet,üssü=1;
+     Scanner input = new Scanner(System.in);
+     
         System.out.print("sayı giriniz : ");
-        sayı=input.nextInt();
+        sayi=input.nextInt();
         
-        for(int i=1;i<=sayı;i*=4){
-            System.out.println(i);
-        }
-        for(int z=1;z<=sayı;z*=5){
-            System.out.println(z);
-        }
-        }
+        System.out.print("kuvvet giriniz : ");
+        kuvvet = input.nextInt();
+        
+        for(int i=1;i < kuvvet;i++){
+            üssü *= sayi;
+            System.out.println(sayi + "^" + kuvvet + " : " + üssü);    
+            
         }
         
+    }
     
-    
-
+}
