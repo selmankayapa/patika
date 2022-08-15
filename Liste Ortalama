@@ -1,0 +1,14 @@
+public class Ortalama {
+
+	public static void main(String[] args) {
+		int[] list= {1,2,3,4,5,6,7};
+		int sum=0;
+		
+		for(int i :list) {
+			sum+=i;
+		}
+		
+		System.out.println("listenin ortalaması : " + sum/list.length);
+	}
+
+}
