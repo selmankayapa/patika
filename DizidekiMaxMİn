@@ -1,0 +1,22 @@
+
+public class MaxMin {
+
+	public static void main(String[] args) {
+		int[] list= {1,2,3,4,5,6,7};
+		int max=list[0];
+		int min=list[0];
+		
+		for(int i:list) {
+			if(i<min) {
+				min=i;
+			}
+			if(i>max) {
+				max=i;
+			}
+		}
+		System.out.println("en büyük sayı : " + max);
+		System.out.println("en küçük sayı : " + min);
+		
+	}
+
+}
